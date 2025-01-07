@@ -1,0 +1,110 @@
+/* tirar esse body::before daqui e do media.css quando finalizar */
+body::before {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+:root {
+  --divisor-line: 2px solid rgb(190, 190, 190)
+}
+
+#nav {
+  border-bottom: var(--divisor-line);
+}
+
+#video {
+  /* position: absolute; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  video,
+  img {
+      width: 100%;
+      object-fit: cover;
+  }
+}
+
+#section-2 {
+
+  min-height: 100vh;
+
+  #carrossel {
+      aspect-ratio: 4/3;
+      background-color: rgb(168, 168, 168);
+      border-radius: 2%;
+      overflow: hidden;
+  }
+
+   button {
+      --bg: #000;
+      --hover-bg: #d6d6d6;
+      --hover-text: #000;
+      color: #fff;
+      cursor: pointer;
+      border: 1px solid var(--bg);
+      border-radius: 4px;
+      padding: 0.8em 2em;
+      background: var(--bg);
+      transition: 0.2s;
+
+      &:hover {
+          color: var(--hover-text);
+          transform: translate(-0.25rem, -0.25rem);
+          background: var(--hover-bg);
+          box-shadow: 0.25rem 0.25rem var(--bg);
+        }
+        &:active {
+          transform: translate(0);
+          box-shadow: none;
+        }
+    }
+
+}
+
+#section-3 {
+  height: 80vh;
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  justify-content: space-between;
+
+  .sec3-pic {
+      height: 100%;
+      background-color: #d8d8d8;
+      width: 40%;
+      position: relative;
+
+      img {
+          width: 100%;
+          object-fit: cover;
+          min-height: 100%;
+          position: absolute;
+          bottom: 0;
+      }
+  }
+
+  .middle-text {
+      position: absolute;
+  }
+
+  .middle-block {
+      --height: 115%;
+      --width: 500px;
+      height: var(--height);
+      width: var(--width);
+      left: calc(50% - var(--width)/2);
+      top: calc(-1*((var(--height) - 100%)/2));
+      position: absolute;
+      background-color: #070707;
+      rotate: 7deg;
+  }
+}
+
+footer {
+  height: 30vh;
+  background-color: gray;
+}
