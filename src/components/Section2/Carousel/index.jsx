@@ -7,16 +7,18 @@ export const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const autoTransition = useRef(null);
 
+  // const slides = [
+  //   { id: 1, url: "https://picsum.photos/800/600?random=1" },
+  //   { id: 2, url: "https://picsum.photos/800/600?random=2" },
+  //   { id: 3, url: "https://picsum.photos/800/600?random=3" },
+  //   { id: 4, url: "https://picsum.photos/800/600?random=4" }
+  // ];
   const slides = [
-    { id: 1, url: "https://picsum.photos/800/600?random=1" },
-    { id: 2, url: "https://picsum.photos/800/600?random=2" },
-    { id: 3, url: "https://picsum.photos/800/600?random=3" },
-    { id: 4, url: "https://picsum.photos/800/600?random=4" }
+    { id: 1, url: "assets/img/carousel/buildings-1836478_12803-4.jpg" },
+    { id: 2, url: "assets/img/carousel/cafe-7454951_12803-4.jpg" },
+    { id: 3, url: "assets/img/carousel/clifford-VobvKmG-StA-unsplash3-4.jpg" },
+    { id: 4, url: "assets/img/carousel/coffee-machine3-4.jpg" }
   ];
-  // assets/img/carousel/buildings-1836478_12803-4.jpg
-  // assets/img/carousel/cafe-7454951_12803-4.jpg
-  // assets/img/carousel/clifford-VobvKmG-StA-unsplash3-4.jpg
-  // assets/img/carousel/coffee-machine3-4.jpg
 
   const navigate = useCallback((direction) => {
     setCurrentSlide(current => {
